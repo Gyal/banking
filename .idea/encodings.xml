@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/.idea/compiler.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/copyright" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/encodings.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/libraries" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/misc.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/modules.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/scopes" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/vcs.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/.idea/workspace.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BankingProject.iml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pom.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src" charset="UTF-8" />
+  </component>
+</project>
