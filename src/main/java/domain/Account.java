@@ -15,13 +15,12 @@ public class Account implements Serializable {
 
     @Id
     @GeneratedValue
-    private int idAccount;
+    private Long idAccount;
 
     @Column(nullable = false)
     protected double balance;
 
-
-    public int getIdAccount() {
+    public Long getIdAccount() {
         return idAccount;
     }
     public double getBalance() {

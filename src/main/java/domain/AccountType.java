@@ -11,7 +11,7 @@ import javax.persistence.Entity;
 public class AccountType {
 
     @Column(nullable = false)
-    private int idAccountType;
+    private Long idAccountType;
 
     @Column(nullable = false)
     private String title;
@@ -34,7 +34,7 @@ public class AccountType {
         return title;
     }
 
-    public int getIdAccountType() {
+    public Long getIdAccountType() {
         return idAccountType;
     }
 
