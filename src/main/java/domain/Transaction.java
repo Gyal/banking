@@ -15,6 +15,9 @@ public class Transaction {
     private Long idTransaction;
 
     @Column(nullable = false)
+    private String transactionName;
+
+    @Column(nullable = false)
     private int NumDebitedAccount;
 
     @Column(nullable = false)
@@ -68,5 +71,17 @@ public class Transaction {
 
     public void setTransactionDate(Date transactionDate) {
         this.transactionDate = transactionDate;
+    }
+
+    public String getTransactionName() {
+        return transactionName;
+    }
+
+    public void setIdTransaction(Long idTransaction) {
+        this.idTransaction = idTransaction;
+    }
+
+    public void setTransactionName(String transactionName) {
+        this.transactionName = transactionName;
     }
 }

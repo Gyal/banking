@@ -25,27 +25,21 @@ public class AccountType {
     public double getPercentage() {
         return percentage;
     }
-
     public double getCelling() {
         return celling;
     }
-
     public String getTitle() {
         return title;
     }
-
     public Long getIdAccountType() {
         return idAccountType;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public void setCelling(double celling) {
         this.celling = celling;
     }
-
     public void setPercentage(double percentage) {
         this.percentage = percentage;
     }

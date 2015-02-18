@@ -35,6 +35,9 @@ public class Customer implements Serializable{
     private String city;
 
     @Column(nullable = false)
+    private String country;
+
+    @Column(nullable = false)
     private int zipCode;
 
     @Column(nullable = false)
@@ -108,11 +111,9 @@ public class Customer implements Serializable{
     public String getMail() {
         return mail;
     }
-
     public void setMail(String mail) {
         this.mail = mail;
     }
-
     public String getCivilities() {
         return Civilities;
     }
@@ -135,5 +136,18 @@ public class Customer implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+    public String getCountry() {
+        return country;
+    }
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
