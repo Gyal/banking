@@ -20,34 +20,31 @@ public class Customer implements Serializable{
     private String Civilities;
 
     @Column(nullable = false)
-    private String name;
+    private String lastname;
 
     @Column(nullable = false)
     private String firstName;
 
     @Column(nullable = false)
-    private Date dateBirthDay;
+    private Date dateOfBirth;
 
     @Column(nullable = false)
     private String street;
 
     @Column(nullable = false)
-    private String ville;
+    private String city;
 
     @Column(nullable = false)
-    private int cp;
+    private int zipCode;
 
     @Column(nullable = false)
     private String mail;
 
     @Column(nullable = false)
-    private String account;
+    private int phoneNumber;
 
     @Column(nullable = false)
-    private int number;
-
-    @Column(nullable = false)
-    private String mdp;
+    private String password;
 
     public Customer(){}
 
@@ -61,11 +58,11 @@ public class Customer implements Serializable{
     }
 
     public String getName() {
-        return name;
+        return lastname;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.lastname = name;
     }
 
     public String getFirstName() {
@@ -76,12 +73,12 @@ public class Customer implements Serializable{
         this.firstName = firstName;
     }
 
-    public Date getDateBirthDay() {
-        return dateBirthDay;
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDateBirthDay(Date dateBirthDay) {
-        this.dateBirthDay = dateBirthDay;
+    public void setDateOfBirth(Date dateBirthDay) {
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getStreet() {
@@ -92,20 +89,20 @@ public class Customer implements Serializable{
         this.street = street;
     }
 
-    public String getVille() {
-        return ville;
+    public String getCity() {
+        return city;
     }
 
-    public void setVille(String ville) {
-        this.ville = ville;
+    public void setCity(String ville) {
+        this.city = city;
     }
 
-    public int getCp() {
-        return cp;
+    public int getZipCode() {
+        return zipCode;
     }
 
-    public void setCp(int cp) {
-        this.cp = cp;
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
     }
 
     public String getMail() {
@@ -116,14 +113,6 @@ public class Customer implements Serializable{
         this.mail = mail;
     }
 
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
     public String getCivilities() {
         return Civilities;
     }
@@ -132,19 +121,19 @@ public class Customer implements Serializable{
         Civilities = civilities;
     }
 
-    public int getNumber() {
-        return number;
+    public int getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setPhoneNumber(int number) {
+        this.phoneNumber = number;
     }
 
-    public String getMdp() {
-        return mdp;
+    public String getPassword() {
+        return password;
     }
 
-    public void setMdp(String mdp) {
-        this.mdp = mdp;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
