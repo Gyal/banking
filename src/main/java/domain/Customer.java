@@ -1,19 +1,21 @@
 package domain;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by youniik-nana on 17/02/15.
  */
+
+@Entity
+@Table(name = "customer")
 public class Customer implements Serializable{
 
     //Variables
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "customer_id")
     private Long idCustomer;
 
     @Column(nullable = false)

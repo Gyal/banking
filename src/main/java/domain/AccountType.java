@@ -1,16 +1,18 @@
 package domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 /**
  * Created by NIIRO on 18/02/2015.
  */
 
 @Entity
+@Table(name = "account_type")
 public class AccountType {
 
-    @Column(nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "account_type_id")
     private Long idAccountType;
 
     @Column(nullable = false)
