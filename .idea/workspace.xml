@@ -681,7 +681,13 @@
       <option name="project" value="LOCAL" />
       <updated>1424308880252</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="- Configuration des annotations @Table ...">
+      <created>1424308888224</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1424308888224</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
