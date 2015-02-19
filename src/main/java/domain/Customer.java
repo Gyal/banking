@@ -56,10 +56,6 @@ public class Customer implements Serializable{
         return idCustomer;
     }
 
-    public void setIdCustomer(Long idCustomer) {
-        this.idCustomer = idCustomer;
-    }
-
     public String getName() {
         return lastname;
     }

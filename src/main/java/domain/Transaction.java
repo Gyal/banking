@@ -2,6 +2,8 @@ package domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -11,7 +13,8 @@ import java.util.Date;
 @Entity
 public class Transaction {
 
-    @Column(nullable = false)
+    @Id
+    @GeneratedValue
     private Long idTransaction;
 
     @Column(nullable = false)

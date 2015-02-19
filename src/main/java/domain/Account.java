@@ -10,26 +10,62 @@ import java.io.Serializable;
 /**
  * Created by youniik-nana on 17/02/15.
  */
-
 @Entity
 public class Account implements Serializable {
 
     @Id
     @GeneratedValue
-    private Long idAccount;
+    private Long idAccount ;
 
     @Column(nullable = false)
-    protected double balance;
+    private String libelleAccount;
 
-    public Long getIdAccount() {
+    @Column(nullable = false)
+    private int numCustomerCredited;
+
+
+    @Column(nullable = false)
+    protected int numCustomerDebited;
+
+    @Column(nullable = false)
+    protected double solde;
+
+
+    public long getIdAccount() {
         return idAccount;
     }
-    public double getBalance() {
-        return balance;
+
+    public String getLibelleAccount() {
+        return libelleAccount;
     }
 
-    public void setBalance(int balance) {
-        this.balance = balance;
+    public void setLibelleAccount(String libelleAccount) {
+        this.libelleAccount = libelleAccount;
+    }
+
+    public int getNumCustomerCredited() {
+        return numCustomerCredited;
+    }
+
+    public void setNumCustomerCredited(int numCustomer) {
+        this.numCustomerCredited = numCustomer;
+    }
+
+
+    public int getNumCustomerDebited() {
+        return numCustomerDebited;
+    }
+
+    public void setNumCustomerDebited(int numCustomerDebited) {
+        this.numCustomerDebited = numCustomerDebited;
+    }
+
+    public double getSolde() {
+        return solde;
+    }
+
+    public void setSolde(int solde) {
+        this.solde = solde;
     }
 }
 
