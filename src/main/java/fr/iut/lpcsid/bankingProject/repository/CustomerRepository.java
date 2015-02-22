@@ -1,4 +1,4 @@
-package repository;
+package fr.iut.lpcsid.bankingProject.repository;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.data.repository.CrudRepository;

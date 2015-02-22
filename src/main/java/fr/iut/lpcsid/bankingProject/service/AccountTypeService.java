@@ -1,8 +1,8 @@
-package service;
+package fr.iut.lpcsid.bankingProject.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.AccountTypeRepository;
+import fr.iut.lpcsid.bankingProject.repository.AccountTypeRepository;
 
 /**
  * Created by Mélina on 18/02/2015.

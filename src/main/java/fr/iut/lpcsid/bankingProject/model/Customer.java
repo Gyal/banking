@@ -1,4 +1,4 @@
-package domain;
+package fr.iut.lpcsid.bankingProject.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
