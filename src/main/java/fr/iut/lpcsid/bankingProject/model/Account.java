@@ -21,15 +21,13 @@ public class Account implements Serializable {
     private String libelleAccount;
 
     @Column(nullable = false)
-    private int numCustomerCredited;
-
-
-    @Column(nullable = false)
-    protected int numCustomerDebited;
-
-    @Column(nullable = false)
     protected double solde;
 
+    public Account(Long idAccount, String libelleAccount, double solde) {
+        this.idAccount = idAccount;
+        this.libelleAccount = libelleAccount;
+        this.solde = solde;
+    }
 
     public long getIdAccount() {
         return idAccount;
@@ -38,35 +36,20 @@ public class Account implements Serializable {
     public String getLibelleAccount() {
         return libelleAccount;
     }
-
     public void setLibelleAccount(String libelleAccount) {
         this.libelleAccount = libelleAccount;
-    }
-
-    public int getNumCustomerCredited() {
-        return numCustomerCredited;
-    }
-
-    public void setNumCustomerCredited(int numCustomer) {
-        this.numCustomerCredited = numCustomer;
-    }
-
-
-    public int getNumCustomerDebited() {
-        return numCustomerDebited;
-    }
-
-    public void setNumCustomerDebited(int numCustomerDebited) {
-        this.numCustomerDebited = numCustomerDebited;
     }
 
     public double getSolde() {
         return solde;
     }
-
     public void setSolde(int solde) {
         this.solde = solde;
     }
+
+    public void debit(int amount){ this.solde = this.solde - amount; };
+
+    public void credit(int amount) { this.solde = this.solde + amount; };
 }
 
 

@@ -31,10 +31,11 @@ public class Transaction {
     @Column(nullable = false)
     private Date transactionDate;
 
-    public Transaction(Long idTransaction, int numDebitedAccount, int numCreditedAccount, double amount, Date transactionDate) {
+    public Transaction(Long idTransaction, String transactionName, int numDebitedAccount, int numCreditedAccount, double amount, Date transactionDate) {
         this.idTransaction = idTransaction;
-        NumDebitedAccount = numDebitedAccount;
-        NumCreditedAccount = numCreditedAccount;
+        this.transactionName = transactionName;
+        this.NumDebitedAccount = numDebitedAccount;
+        this.NumCreditedAccount = numCreditedAccount;
         this.amount = amount;
         this.transactionDate = transactionDate;
     }
@@ -43,47 +44,46 @@ public class Transaction {
         return idTransaction;
     }
 
+    public String getTransactionName() { return transactionName; }
+    public void setTransactionName(String transactionName) { this.transactionName = transactionName; }
+
     public int getNumDebitedAccount() {
         return NumDebitedAccount;
     }
+    public void setNumDebitedAccount(int numDebitedAccount) { NumDebitedAccount = numDebitedAccount; }
+
+    public int getNumCreditedAccount() { return NumCreditedAccount; }
+    public void setNumCreditedAccount(int numCreditedAccount) { NumCreditedAccount = numCreditedAccount; }
 
     public double getAmount() {
         return amount;
     }
-
-    public int getNumCreditedAccount() {
-        return NumCreditedAccount;
-    }
+    public void setAmount(double amount) { this.amount = amount; }
 
     public Date getTransactionDate() {
         return transactionDate;
     }
-
-    public void setNumDebitedAccount(int numDebitedAccount) {
-        NumDebitedAccount = numDebitedAccount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public void setNumCreditedAccount(int numCreditedAccount) {
-        NumCreditedAccount = numCreditedAccount;
-    }
-
     public void setTransactionDate(Date transactionDate) {
         this.transactionDate = transactionDate;
     }
 
-    public String getTransactionName() {
-        return transactionName;
+    public void virement(int numDebitedAccount, int numCreditedAccount, double amount, Date transactionDate){
+        /* à récupérer de la base */
+        long idVirement = 123; /* Cette valeur sera à valeur + 1 du dernier virement de la base de données */
+        Transaction virement = new Transaction(idVirement,"Virement",numDebitedAccount, numCreditedAccount, amount, transactionDate);
     }
 
-    public void setIdTransaction(Long idTransaction) {
-        this.idTransaction = idTransaction;
+    public void depot(int numCreditedAccount, double amount, Date transactionDate){
+        /* à récupérer de la base */
+        long idDepot = 123; /* Cette valeur sera à valeur + 1 du dernier dépot de la base de données */
+        int numDebitedAccount = 0;
+        Transaction virement = new Transaction(idDepot,"Depot",numDebitedAccount, numCreditedAccount, amount, transactionDate);
     }
 
-    public void setTransactionName(String transactionName) {
-        this.transactionName = transactionName;
+    public void retrait(int numDebitedAccount, double amount, Date transactionDate){
+        /* à récupérer de la base */
+        long idRetrait = 123; /* Cette valeur sera à valeur + 1 du dernier dépot de la base de données */
+        int numCreditedAccount = 0;
+        Transaction virement = new Transaction(idRetrait,"Depot",numDebitedAccount, numCreditedAccount, amount, transactionDate);
     }
 }

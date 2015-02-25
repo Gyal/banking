@@ -24,30 +24,27 @@ public class AccountType {
     @Column(nullable = false)
     private double percentage;
 
-    public double getPercentage() {
-        return percentage;
-    }
-
-    public double getCelling() {
-        return celling;
-    }
-
-    public String getTitle() {
-        return title;
+    public AccountType(Long idAccountType, String title, double celling, double percentage) {
+        this.idAccountType = idAccountType;
+        this.title = title;
+        this.celling = celling;
+        this.percentage = percentage;
     }
 
     public long getIdAccountType() {
         return idAccountType;
     }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public double getCelling() {
+        return celling;
     }
-
     public void setCelling(double celling) {
         this.celling = celling;
     }
 
+    public double getPercentage() { return percentage; }
     public void setPercentage(double percentage) {
         this.percentage = percentage;
     }
